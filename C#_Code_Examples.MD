@@ -1,5 +1,7 @@
 ### 1. 99 bottles of beer
+
 Simple count down with while loop
+
 ```
 namespace HelloWorld
 {
@@ -60,6 +62,97 @@ namespace HelloWorld
             }
 
             Console.ReadKey();
+        }
+    }
+}
+```
+
+### 2. FizzBuzz
+
+```
+using System;
+using System.Collections.Generic;
+
+namespace HelloWorld
+{
+    class Program
+    {
+
+        public static List<int> GetIntegers()
+        {
+            var integerList = new List<int>();
+
+            for (var i = 1; i <= 100; i++)
+            {
+                integerList.Add(i);
+            }
+
+            return integerList;
+        }
+
+        public static void FizzBuzz(List<int> integerList)
+        {
+            foreach(var item in integerList)
+            {
+                if(item % 3 == 0 && item % 5 == 0)
+                {
+                    Console.WriteLine("FizzBuzz");
+                }
+                else if (item % 3 == 0)
+                {
+                    Console.WriteLine("Fizz");
+                }
+                else if (item % 5 == 0)
+                {
+                    Console.WriteLine("Buzz");
+                }
+                else
+                {
+                    Console.WriteLine(item);
+                }
+            }
+        }
+
+        static void Main(string[] args)
+        {
+
+            var integerList = GetIntegers();
+
+            FizzBuzz(integerList);
+        }
+    }
+}
+```
+
+```
+namespace FizzBuzz
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            for (int i = 1; i <= 100; i++ )
+            {
+                if(i % 15 == 0)
+                {
+                    Console.WriteLine("FizzBuzz");
+                }
+                else if (i % 3 == 0)
+                {
+                    Console.WriteLine("Fizz");
+                }
+                else if (i % 5 == 0)
+                {
+                    Console.WriteLine("Buzz");
+                }
+                else
+                {
+                    Console.WriteLine(i);
+                }
+            }
+{
+
+            }
         }
     }
 }
